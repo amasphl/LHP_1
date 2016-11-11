@@ -1,0 +1,45 @@
+/*
+ *File:FunctionText-1.
+ *Description:Judge prime.
+ *Date:2016/11/11/Fri.
+ *By:Amber·L
+ */
+
+#include <stdio.h>
+#define MAX 6
+int main()
+{
+	int isprime(int);
+	int i;
+	int x;
+	int judge;
+
+	for (i = 1; i <= MAX; i++)
+	{
+		printf("Please enter a number:\n------------------------\n");
+		scanf_s("%d", &x);
+		judge = isprime(x);
+		if (judge == 1)
+			printf("(=v=)~It's a prime.\n\n");
+		else
+			printf("(QAQ)~It's not a prime.\n\n");
+	}
+	
+	return 0;
+}
+int isprime(int a)
+{
+	int judge = 1;
+	int b;
+	for (b = 2; b < a; b++)
+	{
+		if (a%b == 0)
+		{
+			judge = 0;
+			break;
+		}
+		
+	}
+	return judge;
+	
+}
